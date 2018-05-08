@@ -3,7 +3,7 @@ const config = require("./config.json");
 const dbs = require("./cont/context.js");
 const db = dbs(Sequelize, config);
 
-const server = require("./server")();
+const server = require("./server")(db);
 const port = process.env.PORT || 7000;
 
 db.sequelize.sync().then(() => {

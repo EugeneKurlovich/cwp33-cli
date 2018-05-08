@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const abilitiesChecker = require("./repositories/abilities");
-module.exports = () => {
+module.exports = db => {
   const ReposRepository = require("./repositories/reposrepository")(db.Repos);
   const CommitsRepository = require("./repositories/CommitsRepository")(
     db.Commits
