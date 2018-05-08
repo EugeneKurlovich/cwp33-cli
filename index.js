@@ -5,8 +5,8 @@ const Sequelize = require("sequelize");
 
 const server = require("./server")();
 const port = process.env.PORT || 7000;
+server.listen(port, () => console.log("Running on port " + port));
 
 /*db.sequelize.sync().then(() => {
-  server.listen(port, () => console.log("Running on port " + port));
 });
 */
