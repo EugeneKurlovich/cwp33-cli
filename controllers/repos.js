@@ -28,7 +28,7 @@ function ReposController(ReposRepository) {
     res.json({ result: result });
   }
   const router = express.Router();
-  router.get("/r", readAll);
+  router.get("/rr", readAll);
   router.get("/:id", read);
   router.post("/create", create);
   router.post("/:id/update", update);
